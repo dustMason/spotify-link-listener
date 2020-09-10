@@ -1,0 +1,14 @@
+[Unit]
+Description=Spotify Link Listener
+After=network.target
+
+[Service]
+ExecStart=/home/pi/spotify-link-listener/spotify-link-listener
+WorkingDirectory=/home/pi/spotify-link-listener
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
